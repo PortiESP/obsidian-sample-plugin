@@ -6,3 +6,23 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+
+.custom-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: fit-content;
+
+    transform: translateX(-50%);
+
+    z-index: 9999;
+
+
+}
