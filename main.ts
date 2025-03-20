@@ -14,7 +14,9 @@ import exampleSuggestModal from 'examples/level3/exampleSuggestModal'
 import exampleEditInterface from 'examples/level4/exampleEditInterface'
 import exampleFileExplorer from 'examples/level4/exampleFileExplorer'
 import exampleShellCommands from 'examples/level4/exampleShellCommands'
+import test from 'examples/test/test'
 import { Plugin } from 'obsidian'
+
 
 export default class Main extends Plugin {
 	settings: any = {
@@ -25,7 +27,9 @@ export default class Main extends Plugin {
 	async onload() {
 		// @ts-ignore
 		window.main = this
+		
 		console.log('--------------- loading plugin ---------------', this)
+		test()
 
 		// ==================== Level 1: Basic interface ====================>>>
 		// Example 1. Add a command
@@ -66,7 +70,9 @@ export default class Main extends Plugin {
 		exampleEditInterface(this)
 		// Example 3. File explorer
 		exampleFileExplorer(this)
+
 		
+		// 
 	}
 
 	async onunload() {
