@@ -2,8 +2,8 @@ import { ItemView, Plugin, WorkspaceLeaf } from "obsidian";
 
 export default function exampleCustomViewsAndPanes(main: Plugin) {
     // Register a new view type
-    main.registerView(VIEW_TYPE_EXAMPLE, (leaf: WorkspaceLeaf) => new ExampleView(leaf))
-
+    main.registerView(VIEW_TYPE_EXAMPLE, (leaf: WorkspaceLeaf) => new ExampleSideView(leaf))
+    
     // Add a command to open the view
     main.addCommand({
         id: 'open-example-view',
@@ -16,7 +16,7 @@ export default function exampleCustomViewsAndPanes(main: Plugin) {
 }
 
 export const VIEW_TYPE_EXAMPLE = 'example-view'
-class ExampleView extends ItemView {
+class ExampleSideView extends ItemView {
     constructor(leaf: WorkspaceLeaf) {
         super(leaf)
     }

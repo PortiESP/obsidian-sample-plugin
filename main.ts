@@ -4,6 +4,7 @@ import exampleAddStatusBarItem from 'examples/level1/add-status-bar-item'
 import exampleCreateFilesAndFolders from 'examples/level2/create-files-ad-folders'
 import exampleReadWriteData from 'examples/level2/read-and-write-files'
 import exampleSettingsManagement from 'examples/level2/settings-management'
+import exampleContextMenu from 'examples/level3/exampleContextMenu'
 import exampleCustomViewsAndPanes from 'examples/level3/exampleCustomViewsAndPanes'
 import exampleEditorEvents from 'examples/level3/exampleEditorEvents'
 import exampleEditorManipulation from 'examples/level3/exampleEditorManipulation'
@@ -11,6 +12,7 @@ import exampleKeybinds from 'examples/level3/exampleKeybinds'
 import exampleRegisterIntervals from 'examples/level3/exampleRegisterIntervals'
 import exampleSuggestModal from 'examples/level3/exampleSuggestModal'
 import exampleEditInterface from 'examples/level4/exampleEditInterface'
+import exampleFileExplorer from 'examples/level4/exampleFileExplorer'
 import exampleShellCommands from 'examples/level4/exampleShellCommands'
 import { Plugin } from 'obsidian'
 
@@ -21,6 +23,8 @@ export default class Main extends Plugin {
 	}
 
 	async onload() {
+		// @ts-ignore
+		window.main = this
 		console.log('--------------- loading plugin ---------------', this)
 
 		// ==================== Level 1: Basic interface ====================>>>
@@ -32,32 +36,36 @@ export default class Main extends Plugin {
 		exampleAddStatusBarItem(this)
 
 		// ==================== Level 2: File management ====================>>>
-		// Example 4. Read and write data
+		// Example 1. Read and write data
 		exampleReadWriteData(this)
-		// Example 5. Create files and folders
+		// Example 2. Create files and folders
 		exampleCreateFilesAndFolders(this)
-		// Example 6. Create a settings file
+		// Example 3. Create a settings file
 		exampleSettingsManagement(this)
 
 		// ==================== Level 3: Editor ====================>>>
-		// Example 7. Editor manipulation
+		// Example 1. Editor manipulation
 		exampleEditorManipulation(this)
-		// Example 8. Editor events
+		// Example 2. Editor events
 		exampleEditorEvents(this)
-		// Example 9. Custom views and panes
+		// Example 3. Custom views and panes
 		exampleCustomViewsAndPanes(this)
-		// Example 10. Suggest Modal
+		// Example 4. Suggest Modal
 		exampleSuggestModal(this)
-		// Example 11. Keybinds
+		// Example 5. Keybinds
 		exampleKeybinds(this)
-		// Example 12. Registering Intervals
+		// Example 6. Registering Intervals
 		exampleRegisterIntervals(this)
+		// Example 7. Context Menu
+		exampleContextMenu(this)	
 
 		// ==================== Level 4: Advanced operations ====================>>>
-		// Example 13. Shell commands
+		// Example 1. Shell commands
 		exampleShellCommands(this)
-		// Example 14. Edit the interface
+		// Example 2. Edit the interface
 		exampleEditInterface(this)
+		// Example 3. File explorer
+		exampleFileExplorer(this)
 		
 	}
 

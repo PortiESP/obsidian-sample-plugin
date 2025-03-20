@@ -1,6 +1,22 @@
-import { App, Plugin, SuggestModal } from "obsidian";
+import { App, Modal, Plugin, SuggestModal } from "obsidian";
+
+
 
 export default function exampleSuggestModal(main: Plugin) {
+    // ============= MODALS ==============>>>
+
+    // ------ Modal ------
+    
+    main.addCommand({
+        id: 'open-center-view',
+        name: 'Open Center View',
+        callback: () => {
+            new ExampleCenterView(main.app).open()
+        }
+    })
+
+    // ------ Suggest Modal ------
+
     main.addCommand({
         id: 'open-suggest-modal',
         name: 'Open Suggest Modal',
@@ -11,6 +27,22 @@ export default function exampleSuggestModal(main: Plugin) {
 }
 
 
+// ============= CLASSES ==============>>>
+
+// ------------------ Modal ------------------
+
+export class ExampleCenterView extends Modal {
+    constructor(app: App) {
+        super(app);
+    }
+
+    onOpen(): void {
+        this.contentEl.createEl('h2', { text: 'Center View' })
+    }
+}
+
+
+// ------------------ Suggest Modal ------------------
 
 class CustomSuggestModal extends SuggestModal<string> {
     constructor(app: App) {
