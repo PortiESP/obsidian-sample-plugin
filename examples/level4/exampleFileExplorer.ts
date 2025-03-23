@@ -48,7 +48,7 @@ function clearHiddenFiles(main: Plugin) {
 }
 
 function updateHiddenFiles(hiddenFiles: string[]) {
-    const selectors = hiddenFiles.map(path => `[data-path="${path}"]`).join(', ');
+    const selectors = hiddenFiles.map(path => `div:has(> [data-path="${path}"])`).join(', ');
 
     const styleElement = document.createElement('style');
     styleElement.id = 'hidden-files-style';

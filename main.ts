@@ -12,8 +12,11 @@ import exampleKeybinds from 'examples/level3/exampleKeybinds'
 import exampleRegisterIntervals from 'examples/level3/exampleRegisterIntervals'
 import exampleSuggestModal from 'examples/level3/exampleSuggestModal'
 import exampleEditInterface from 'examples/level4/exampleEditInterface'
+import exampleEditorExtension from 'examples/level4/exampleEditorExtension'
 import exampleFileExplorer from 'examples/level4/exampleFileExplorer'
+import exampleMarkdownPostProcessing from 'examples/level4/exampleMarkdownPostProcessing'
 import exampleShellCommands from 'examples/level4/exampleShellCommands'
+import exampleStateManagement from 'examples/level4/exampleStateManagement'
 import test from 'examples/test/test'
 import { Plugin } from 'obsidian'
 
@@ -29,7 +32,7 @@ export default class Main extends Plugin {
 		window.main = this
 		
 		console.log('--------------- loading plugin ---------------', this)
-		test()
+		test(this)
 
 		// ==================== Level 1: Basic interface ====================>>>
 		// Example 1. Add a command
@@ -70,9 +73,12 @@ export default class Main extends Plugin {
 		exampleEditInterface(this)
 		// Example 3. File explorer
 		exampleFileExplorer(this)
-
-		
-		// 
+		// Example 4. Markdown post-processing
+		exampleMarkdownPostProcessing(this)
+		// Example 5. State management
+		exampleStateManagement(this)
+		// Example 6. Editor Extension
+		exampleEditorExtension(this)
 	}
 
 	async onunload() {
