@@ -17,6 +17,7 @@ import exampleFileExplorer from 'examples/level4/exampleFileExplorer'
 import exampleMarkdownPostProcessing from 'examples/level4/exampleMarkdownPostProcessing'
 import exampleShellCommands from 'examples/level4/exampleShellCommands'
 import exampleStateManagement from 'examples/level4/exampleStateManagement'
+import exampleExplorer from 'examples/level5/exampleExplorer'
 import test from 'examples/test/test'
 import { Plugin } from 'obsidian'
 
@@ -36,49 +37,53 @@ export default class Main extends Plugin {
 
 		// ==================== Level 1: Basic interface ====================>>>
 		// Example 1. Add a command
-		exampleAddCommand(this)
+		// exampleAddCommand(this)
 		// Example 2. Add a ribbon icon
-		exampleAddRibbonIcon(this)
+		// exampleAddRibbonIcon(this)
 		// Example 3. Add a status bar item
-		exampleAddStatusBarItem(this)
+		// exampleAddStatusBarItem(this)
 
 		// ==================== Level 2: File management ====================>>>
 		// Example 1. Read and write data
-		exampleReadWriteData(this)
+		// exampleReadWriteData(this)
 		// Example 2. Create files and folders
-		exampleCreateFilesAndFolders(this)
+		// exampleCreateFilesAndFolders(this)
 		// Example 3. Create a settings file
-		exampleSettingsManagement(this)
+		// exampleSettingsManagement(this)
 
 		// ==================== Level 3: Editor ====================>>>
 		// Example 1. Editor manipulation
-		exampleEditorManipulation(this)
+		// exampleEditorManipulation(this)
 		// Example 2. Editor events
-		exampleEditorEvents(this)
+		// exampleEditorEvents(this)
 		// Example 3. Custom views and panes
-		exampleCustomViewsAndPanes(this)
+		// exampleCustomViewsAndPanes(this)
 		// Example 4. Suggest Modal
-		exampleSuggestModal(this)
+		// exampleSuggestModal(this)
 		// Example 5. Keybinds
-		exampleKeybinds(this)
+		// exampleKeybinds(this)
 		// Example 6. Registering Intervals
-		exampleRegisterIntervals(this)
+		// exampleRegisterIntervals(this)
 		// Example 7. Context Menu
-		exampleContextMenu(this)	
+		// exampleContextMenu(this)	
 
 		// ==================== Level 4: Advanced operations ====================>>>
 		// Example 1. Shell commands
-		exampleShellCommands(this)
+		// exampleShellCommands(this)
 		// Example 2. Edit the interface
-		exampleEditInterface(this)
+		// exampleEditInterface(this)
 		// Example 3. File explorer
-		exampleFileExplorer(this)
+		// exampleFileExplorer(this)
 		// Example 4. Markdown post-processing
-		exampleMarkdownPostProcessing(this)
+		// exampleMarkdownPostProcessing(this)
 		// Example 5. State management
-		exampleStateManagement(this)
+		// exampleStateManagement(this)
 		// Example 6. Editor Extension
-		exampleEditorExtension(this)
+		// exampleEditorExtension(this)
+
+		// ==================== Level 5: Advanced functionalities ====================>>>
+		// Example 1. Explorer
+		exampleExplorer(this)
 	}
 
 	async onunload() {

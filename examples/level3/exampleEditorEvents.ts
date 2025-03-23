@@ -80,4 +80,9 @@ export default function exampleEditorEvents(main: Plugin): void {
     main.registerEvent(main.app.workspace.on('editor-menu', (editor) => {
         console.log('Editor menu triggered:', editor)
     }))
+
+    // ==================== File explorer events ====================>>>
+    const explorer = main.app.workspace.getLeavesOfType("file-explorer")[0];
+    explorer.view
+
 }
